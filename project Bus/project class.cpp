@@ -226,7 +226,7 @@ void System::menu(LogIn& login) {
         	if(ch=='W' or ch=='w')
         	{
         do {
-        	  system("cls");
+        	  //system("cls");
         std::cout << "1. Add Bus\n";
         std::cout << "2. Edit Bus\n";
         std::cout << "3. Delete Bus\n";
