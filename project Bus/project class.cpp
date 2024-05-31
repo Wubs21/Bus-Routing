@@ -58,7 +58,7 @@ bool LogIn::authenticate(){
 	{
 		cout<<"Login Sucessfull!!"<<endl;
 		
-		cout<<"|----------------------------|"<<endl;
+	cout<<"|----------------------------|"<<endl;
         cout<<"| DWFA Bus Routing System    |"<<endl;
         cout<<"|                            |"<<endl;
         cout<<"|----------------------------|"<<endl;
