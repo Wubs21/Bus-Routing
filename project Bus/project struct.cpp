@@ -5,25 +5,25 @@ using namespace std;
 
 struct BusRoute {
     int routeNo;
-    std::string arrTime;
-    std::string departTime;
-    std::string source;
-    std::string destination;
+    string arrTime;
+    string departTime;
+    string source;
+    string destination;
     float distance;
 };
 
 struct BusDriver {
-    std::string driverName;
+    string driverName;
     int driverID;
     int phoneNo;
-    std::string email;
+    string email;
 
-    void welcome_message();
+    //void welcome_message();
 };
 
 struct Bus {
     int busID;
-    std::string busName;
+    string busName;
     BusRoute br;
     BusDriver bd;
 
@@ -37,8 +37,8 @@ struct Bus {
 
 struct LogIn {
 private:
-    std::string userName;
-    std::string password;
+    string userName;
+    string password;
 
 public:
     bool authenticate();
@@ -47,10 +47,9 @@ public:
     void search_records(Bus&, int);
     void exit();
 };
-  #include <iostream>
-#include <string>
+  
 
-using namespace std;
+
 
 bool LogIn::authenticate() {
     string username, password;
@@ -109,9 +108,7 @@ void LogIn::exit() {
     cout << "Termination Message" << endl;
 }
 
-void BusDriver::welcome_message() {
-    cout << "Welcome!" << endl;
-}
+
 
 void Bus::add_bus(int newBusID) {
     busID = newBusID;
@@ -224,77 +221,77 @@ void System::menu(LogIn& login) {
         	{
         do {
         	  //system("cls");
-        std::cout << "1. Add Bus\n";
-        std::cout << "2. Edit Bus\n";
-        std::cout << "3. Delete Bus\n";
-        std::cout << "4. Add Bus Driver\n";
-        std::cout << "5. Edit Bus Driver\n";
-        std::cout << "6. Delete Bus Driver\n";
-        std::cout << "7. View Bus\n";
-        std::cout << "8. View Bus Driver\n";
-        std::cout << "9. Search Records\n";
-        std::cout << "10. Exit\n";
-        std::cout << "Enter your choice: ";
-        std::cin >> choice;
+        cout << "1. Add Bus\n";
+        cout << "2. Edit Bus\n";
+        cout << "3. Delete Bus\n";
+        cout << "4. Add Bus Driver\n";
+        cout << "5. Edit Bus Driver\n";
+        cout << "6. Delete Bus Driver\n";
+        cout << "7. View Bus\n";
+        cout << "8. View Bus Driver\n";
+        cout << "9. Search Records\n";
+        cout << "10. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
         switch (choice) {
             case 1:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 bus.add_bus(id);
                 break;
             case 2:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 bus.edit_bus(id);
                 break;
             case 3:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 bus.delete_bus(id);
                 break;
             case 4:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 bus.add_busDriver(id);
                 break;
             case 5:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 bus.edit_busDriver(id);
                 break;
             case 6:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 bus.delete_busDriver(id);
                 break;
             case 7:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 login.view_bus(bus, id);
                 break;
             case 8:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 login.view_busDriver(bus.bd, id);
                 break;
             case 9:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 login.search_records(bus, id);
                 break;
             case 10:
                 login.exit();
                 break;
             default:
-                std::cout << "Invalid choice! Please try again." << std::endl;
+                cout << "Invalid choice! Please try again." << std::endl;
         }
     } while (choice != 10);
 			}
 			else {
 				cout<<"Invalid Character try again!!!!"<<endl;
 			}
-		}while(ch!='Y'or ch!='y');
+		}while(ch!='W'or ch!='w');
 }
 int main() {
     LogIn login;
