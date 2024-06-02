@@ -4,25 +4,25 @@ using namespace std;
 class BusRoute {
 public:
     int routeNo;
-    std::string arrTime;
-    std::string departTime;
-    std::string source;
-    std::string destination;
+    string arrTime;
+    string departTime;
+    string source;
+    string destination;
     float distance;
 };
 class BusDriver {
 public:
-    std::string driverName;
+    string driverName;
     int driverID;
     int phoneNo;
-    std::string email;
+    string email;
 
     void welcome_message();
 };
 class Bus {
 public:
     int busID;
-    std::string busName;
+    string busName;
     BusRoute br;
     BusDriver bd;
 
@@ -35,8 +35,8 @@ public:
 };
 class LogIn {
 private:
-    std::string userName;
-    std::string password;
+    string userName;
+    string password;
 public:
 	bool authenticate();
     void view_bus(Bus&, int);
@@ -58,7 +58,7 @@ bool LogIn::authenticate(){
 	{
 		cout<<"Login Sucessfull!!"<<endl;
 		
-	cout<<"|----------------------------|"<<endl;
+		cout<<"|----------------------------|"<<endl;
         cout<<"| DWFA Bus Routing System    |"<<endl;
         cout<<"|                            |"<<endl;
         cout<<"|----------------------------|"<<endl;
@@ -75,31 +75,31 @@ bool LogIn::authenticate(){
 
 void LogIn::view_bus(Bus& bus, int busID) {
     if (bus.busID == busID) {
-        std::cout << "Bus ID: " << bus.busID << std::endl;
-        std::cout << "Bus Name: " << bus.busName << std::endl;
-        std::cout << "Route Number: " << bus.br.routeNo << std::endl;
-        std::cout << "Arrival Time: " << bus.br.arrTime << std::endl;
-        std::cout << "Departure Time: " << bus.br.departTime << std::endl;
-        std::cout << "Source: " << bus.br.source << std::endl;
-        std::cout << "Destination: " << bus.br.destination << std::endl;
-        std::cout << "Distance: " << bus.br.distance << std::endl;
-        std::cout << "Driver Name: " << bus.bd.driverName << std::endl;
-        std::cout << "Driver ID: " << bus.bd.driverID << std::endl;
-        std::cout << "Driver Phone No: " << bus.bd.phoneNo << std::endl;
-        std::cout << "Driver Email: " << bus.bd.email << std::endl;
+        cout << "Bus ID: " << bus.busID << std::endl;
+        cout << "Bus Name: " << bus.busName << std::endl;
+        cout << "Route Number: " << bus.br.routeNo << std::endl;
+        cout << "Arrival Time: " << bus.br.arrTime << std::endl;
+        cout << "Departure Time: " << bus.br.departTime << std::endl;
+        cout << "Source: " << bus.br.source << std::endl;
+        cout << "Destination: " << bus.br.destination << std::endl;
+        cout << "Distance: " << bus.br.distance << std::endl;
+        cout << "Driver Name: " << bus.bd.driverName << std::endl;
+        cout << "Driver ID: " << bus.bd.driverID << std::endl;
+        cout << "Driver Phone No: " << bus.bd.phoneNo << std::endl;
+        cout << "Driver Email: " << bus.bd.email << std::endl;
     } else {
-        std::cout << "Bus not found!" << std::endl;
+        cout << "Bus not found!" << std::endl;
     }
 }
 
 void LogIn::view_busDriver(BusDriver& bd, int driverID) {
     if (bd.driverID == driverID) {
-        std::cout << "Driver Name: " << bd.driverName << std::endl;
-        std::cout << "Driver ID: " << bd.driverID << std::endl;
-        std::cout << "Phone No: " << bd.phoneNo << std::endl;
-        std::cout << "Email: " << bd.email << std::endl;
+        cout << "Driver Name: " << bd.driverName << std::endl;
+        cout << "Driver ID: " << bd.driverID << std::endl;
+        cout << "Phone No: " << bd.phoneNo << std::endl;
+        cout << "Email: " << bd.email << std::endl;
     } else {
-        std::cout << "Driver not found!" << std::endl;
+        cout << "Driver not found!" << std::endl;
     }
 }
 
@@ -108,52 +108,52 @@ void LogIn::search_records(Bus& bus, int busID) {
 }
 
 void LogIn::exit() {
-    std::cout << "Termination Message" << std::endl;
+    cout << "Termination Message" << std::endl;
 }
-#include <iostream>
+
 
 void BusDriver::welcome_message() {
-    std::cout << "Welcome!" << std::endl;
+    cout << "Welcome!" << std::endl;
 }
-#include <iostream>
+
 
 void Bus::add_bus(int newBusID) {
     busID = newBusID;
-    std::cout << "Enter bus name: ";
-    std::cin >> busName;
-    std::cout << "Enter route number: ";
-    std::cin >> br.routeNo;
-    std::cout << "Enter arrival time: ";
-    std::cin >> br.arrTime;
-    std::cout << "Enter departure time: ";
-    std::cin >> br.departTime;
-    std::cout << "Enter source: ";
-    std::cin >> br.source;
-    std::cout << "Enter destination: ";
-    std::cin >> br.destination;
-    std::cout << "Enter distance: ";
-    std::cin >> br.distance;
+    cout << "Enter bus name: ";
+    cin >> busName;
+    cout << "Enter route number: ";
+    cin >> br.routeNo;
+    cout << "Enter arrival time: ";
+    cin >> br.arrTime;
+    cout << "Enter departure time: ";
+    cin >> br.departTime;
+    cout << "Enter source: ";
+    cin >> br.source;
+    cout << "Enter destination: ";
+    cin >> br.destination;
+    cout << "Enter distance: ";
+    cin >> br.distance;
 }
 
 void Bus::edit_bus(int busID) {
     if (this->busID == busID) {
-        std::cout << "Edit bus details:" << std::endl;
-        std::cout << "Enter new bus name: ";
-        std::cin >> busName;
-        std::cout << "Enter new route number: ";
-        std::cin >> br.routeNo;
-        std::cout << "Enter new arrival time: ";
-        std::cin >> br.arrTime;
-        std::cout << "Enter new departure time: ";
-        std::cin >> br.departTime;
-        std::cout << "Enter new source: ";
-        std::cin >> br.source;
-        std::cout << "Enter new destination: ";
-        std::cin >> br.destination;
-        std::cout << "Enter new distance: ";
-        std::cin >> br.distance;
+        cout << "Edit bus details:" << std::endl;
+        cout << "Enter new bus name: ";
+        cin >> busName;
+        cout << "Enter new route number: ";
+        cin >> br.routeNo;
+        cout << "Enter new arrival time: ";
+        cin >> br.arrTime;
+        cout << "Enter new departure time: ";
+        cin >> br.departTime;
+        cout << "Enter new source: ";
+        cin >> br.source;
+        cout << "Enter new destination: ";
+        cin >> br.destination;
+        cout << "Enter new distance: ";
+        cin >> br.distance;
     } else {
-        std::cout << "Bus not found!" << std::endl;
+        cout << "Bus not found!" << std::endl;
     }
 }
 
@@ -173,31 +173,31 @@ void Bus::delete_bus(int busID) {
         bd.email.clear();
         std::cout << "Bus deleted successfully." << std::endl;
     } else {
-        std::cout << "Bus not found!" << std::endl;
+        cout << "Bus not found!" << std::endl;
     }
 }
 
 void Bus::add_busDriver(int driverID) {
     bd.driverID = driverID;
-    std::cout << "Enter driver name: ";
-    std::cin >> bd.driverName;
-    std::cout << "Enter driver phone number: ";
-    std::cin >> bd.phoneNo;
-    std::cout << "Enter driver email: ";
-    std::cin >> bd.email;
+    cout << "Enter driver name: ";
+    cin >> bd.driverName;
+    cout << "Enter driver phone number: ";
+    cin >> bd.phoneNo;
+    cout << "Enter driver email: ";
+    cin >> bd.email;
 }
 
 void Bus::edit_busDriver(int driverID) {
     if (bd.driverID == driverID) {
-        std::cout << "Edit driver details:" << std::endl;
-        std::cout << "Enter new driver name: ";
-        std::cin >> bd.driverName;
-        std::cout << "Enter new driver phone number: ";
-        std::cin >> bd.phoneNo;
-        std::cout << "Enter new driver email: ";
-        std::cin >> bd.email;
+        cout << "Edit driver details:" << std::endl;
+        cout << "Enter new driver name: ";
+        cin >> bd.driverName;
+        cout << "Enter new driver phone number: ";
+        cin >> bd.phoneNo;
+        cout << "Enter new driver email: ";
+        cin >> bd.email;
     } else {
-        std::cout << "Driver not found!" << std::endl;
+        cout << "Driver not found!" << std::endl;
     }
 }
 
@@ -209,7 +209,7 @@ void Bus::delete_busDriver(int driverID) {
         bd.email.clear();
         std::cout << "Driver deleted successfully." << std::endl;
     } else {
-        std::cout << "Driver not found!" << std::endl;
+        cout << "Driver not found!" << std::endl;
     }
 }
 #include <iostream>
@@ -227,23 +227,23 @@ void System::menu(LogIn& login) {
         	{
         do {
         	  //system("cls");
-        std::cout << "1. Add Bus\n";
-        std::cout << "2. Edit Bus\n";
-        std::cout << "3. Delete Bus\n";
-        std::cout << "4. Add Bus Driver\n";
-        std::cout << "5. Edit Bus Driver\n";
-        std::cout << "6. Delete Bus Driver\n";
-        std::cout << "7. View Bus\n";
-        std::cout << "8. View Bus Driver\n";
-        std::cout << "9. Search Records\n";
-        std::cout << "10. Exit\n";
-        std::cout << "Enter your choice: ";
-        std::cin >> choice;
+        cout << "1. Add Bus\n";
+        cout << "2. Edit Bus\n";
+        cout << "3. Delete Bus\n";
+        cout << "4. Add Bus Driver\n";
+        cout << "5. Edit Bus Driver\n";
+        cout << "6. Delete Bus Driver\n";
+        cout << "7. View Bus\n";
+        cout << "8. View Bus Driver\n";
+        cout << "9. Search Records\n";
+        cout << "10. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
         switch (choice) {
             case 1:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 bus.add_bus(id);
                 break;
             case 2:
@@ -252,52 +252,52 @@ void System::menu(LogIn& login) {
                 bus.edit_bus(id);
                 break;
             case 3:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 bus.delete_bus(id);
                 break;
             case 4:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 bus.add_busDriver(id);
                 break;
             case 5:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 bus.edit_busDriver(id);
                 break;
             case 6:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 bus.delete_busDriver(id);
                 break;
             case 7:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 login.view_bus(bus, id);
                 break;
             case 8:
-                std::cout << "Enter Driver ID: ";
-                std::cin >> id;
+                cout << "Enter Driver ID: ";
+                cin >> id;
                 login.view_busDriver(bus.bd, id);
                 break;
             case 9:
-                std::cout << "Enter Bus ID: ";
-                std::cin >> id;
+                cout << "Enter Bus ID: ";
+                cin >> id;
                 login.search_records(bus, id);
                 break;
             case 10:
                 login.exit();
                 break;
             default:
-                std::cout << "Invalid choice! Please try again." << std::endl;
+                cout << "Invalid choice! Please try again." << std::endl;
         }
     } while (choice != 10);
 			}
 			else {
 				cout<<"Invalid Character try again!!!!"<<endl;
 			}
-		}while(ch!='Y'or ch!='y');
+		}while(ch!='w'or ch!='W');
     
 }
 
@@ -312,5 +312,4 @@ int main() {
 	}
     return 0;
 }
-
 
