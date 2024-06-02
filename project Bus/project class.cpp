@@ -58,7 +58,7 @@ bool LogIn::authenticate(){
 	{
 		cout<<"Login Sucessfull!!"<<endl;
 		
-		cout<<"|----------------------------|"<<endl;
+	cout<<"|----------------------------|"<<endl;
         cout<<"| DWFA Bus Routing System    |"<<endl;
         cout<<"|                            |"<<endl;
         cout<<"|----------------------------|"<<endl;
@@ -226,7 +226,7 @@ void System::menu(LogIn& login) {
         	if(ch=='W' or ch=='w')
         	{
         do {
-        	  //system("cls");
+          //system("cls");
         cout << "1. Add Bus\n";
         cout << "2. Edit Bus\n";
         cout << "3. Delete Bus\n";
